@@ -1,0 +1,29 @@
+{
+    "questions_not_in_kb": [
+        {
+            "question": "Can you notarize educational certificates?",
+            "suggested_answer": "Generally, we can notarize educational certificates as long as they fulfill the requirements for notarization, such as providing proper identification and the presence of a notarial certificate.",
+            "reason": "Notarization of educational certificates is a common request that users might need support with. It is important to have standardized guidance on this request."
+        },
+        {
+            "question": "Can I notarize a document for someone else who is not the signer?",
+            "suggested_answer": "No, the person who is signing the document must be present during the notarization process to verify their identity and consent.",
+            "reason": "Many might be unclear about who needs to be present for notarization, and it is a crucial aspect of the notarization process."
+        },
+        {
+            "question": "What do I do if my document was rejected after notarization?",
+            "suggested_answer": "Please contact our support team for assistance in understanding the reason for rejection and to discuss options for re-notarization, if necessary.",
+            "reason": "Guidance on handling rejected notarized documents can assist users in resolving issues quickly and maintaining confidence in the service."
+        },
+        {
+            "question": "Can you notarize electronic signatures?",
+            "suggested_answer": "Yes, Remote Online Notarization allows us to notarize documents with electronic signatures, providing they meet the legal requirements of the relevant jurisdiction.",
+            "reason": "The inquiry into the notarization of electronically signed documents is relevant as digital transactions are becoming more prevalent."
+        },
+        {
+            "question": "What happens after my notarization session?",
+            "suggested_answer": "After your notarization session, your document will be securely stored, and you'll be able to download it immediately. A confirmation email with a link to download the notarized document will also be provided.",
+            "reason": "Users often need reassurance about the post-session process, including the security and availability of their notarized documents."
+        }
+    ]
+}

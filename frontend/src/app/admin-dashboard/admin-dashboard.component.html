@@ -1,0 +1,65 @@
+<div class="dashboard-container">
+  <div class="glass-panel main-panel">
+    
+    <div class="header">
+      <h2>Admin Analytics Hub</h2>
+      <p class="subtitle">Real-time overview of your eNotary conversational AI traffic.</p>
+    </div>
+
+    <div *ngIf="isLoading" class="loader-container">
+      <div class="spinner"></div>
+      <p>Loading matrix data...</p>
+    </div>
+
+    <div *ngIf="errorStr" class="error-state">
+      <p>{{errorStr}}</p>
+    </div>
+
+    <div *ngIf="analyticsData && !isLoading" class="metrics-grid">
+      <!-- Total Sessions Card -->
+      <div class="metric-card gold-glow span-full">
+        <div class="metric-title">Total AI Sessions</div>
+        <div class="metric-value">{{ analyticsData.totalSessions | number }}</div>
+        <div class="metric-desc">Combined interactions across all user types</div>
+      </div>
+
+      <!-- Breakdown Cards -->
+      <div class="metric-card blue-glow">
+        <div class="metric-title">Customer AI Calls</div>
+        <div class="metric-value">{{ analyticsData.breakdown.customer | number }}</div>
+        <div class="metric-desc">Standard users & guests</div>
+      </div>
+
+      <div class="metric-card purple-glow">
+        <div class="metric-title">Notary AI Calls</div>
+        <div class="metric-value">{{ analyticsData.breakdown.notary | number }}</div>
+        <div class="metric-desc">Certified eNotary providers</div>
+      </div>
+
+      <div class="metric-card green-glow">
+        <div class="metric-title">Business AI Calls</div>
+        <div class="metric-value">{{ analyticsData.breakdown.business | number }}</div>
+        <div class="metric-desc">Enterprise partners</div>
+      </div>
+    </div>
+
+    <!-- KB Insights Section -->
+    <div *ngIf="kbSuggestions && kbSuggestions.length > 0" class="insights-section">
+      <div class="section-header">
+        <h3>AI-Powered KB Insights</h3>
+        <p>Gaps identified from recent customer chat history.</p>
+      </div>
+
+      <div class="insights-grid">
+        <div *ngFor="let item of kbSuggestions" class="insight-card gold-glow">
+          <div class="insight-tag">New Gap Found</div>
+          <div class="insight-question"><strong>Q:</strong> {{item.question}}</div>
+          <div class="insight-answer"><strong>Suggest:</strong> {{item.suggested_answer}}</div>
+          <div class="insight-reason"><em>Reason: {{item.reason}}</em></div>
+          <button class="approve-btn">Approve & Add to KB</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

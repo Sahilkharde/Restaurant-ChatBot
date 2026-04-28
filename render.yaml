@@ -1,0 +1,24 @@
+services:
+  # ── Backend (Node.js API) ──────────────────────────────────────────────────
+  - type: web
+    name: dinebot-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+
+  # ── Frontend (Angular Static Site) ────────────────────────────────────────
+  - type: web
+    name: dinebot-frontend
+    runtime: node
+    rootDir: frontend
+    buildCommand: npm install && npx ng build --configuration production
+    startCommand: npx serve -s dist/enoc-chatbot/browser -l 10000
+    envVars:
+      - key: NODE_ENV
+        value: production

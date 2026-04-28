@@ -1,0 +1,44 @@
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #e65c00;
+  letter-spacing: -0.5px;
+}
+
+.global-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    a {
+      text-decoration: none;
+      color: #4a5568;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.2s;
+
+      &.router-link-active, &:hover {
+        color: #3182ce;
+      }
+    }
+
+    .divider {
+      color: #e2e8f0;
+    }
+  }
+}
+
+.app-content {
+  min-height: calc(100vh - 70px);
+}

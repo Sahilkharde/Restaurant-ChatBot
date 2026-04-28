@@ -1,0 +1,44 @@
+{
+  "name": "enoc-chatbot",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "prod-build": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build --configuration production",
+    "aws-rm-files": "aws s3 rm s3://enocchatbotfrontendtest --recursive",
+    "aws-deploy-v1": "aws s3 sync dist/enoc-chatbot/browser/ s3://enocchatbotfrontendtest --exclude \"*\" --include \"*.js\" --content-type application/javascript",
+    "aws-deploy-v2": "aws s3 sync dist/enoc-chatbot/browser/ s3://enocchatbotfrontendtest --exclude \".js\"",
+    "aws-clear-cache": "aws cloudfront wait invalidation-completed --id IEP2L0UWCLN8QD7LOBTROFGGS2 --distribution-id E37DPUANDHTSH",
+    "aws-quick-run":"npm run prod-build && npm run aws-rm-files && npm run aws-deploy-v1 && npm run aws-deploy-v2 && npm run aws-clear-cache"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "^19.2.0",
+    "@angular/compiler": "^19.2.0",
+    "@angular/core": "^19.2.0",
+    "@angular/forms": "^19.2.0",
+    "@angular/platform-browser": "^19.2.0",
+    "@angular/platform-browser-dynamic": "^19.2.0",
+    "@angular/router": "^19.2.0",
+    "rxjs": "~7.8.0",
+    "serve": "^14.2.4",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^19.2.9",
+    "@angular/cli": "^19.2.9",
+    "@angular/compiler-cli": "^19.2.0",
+    "@types/jasmine": "~5.1.0",
+    "jasmine-core": "~5.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.7.2"
+  }
+}

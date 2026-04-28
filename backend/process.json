@@ -1,0 +1,22 @@
+{
+    "apps": [
+        {
+            "name": "enocChatBotBackendTest",
+            "script": "www",
+            "instances": 1,
+            "exec_mode": "cluster",
+            "watch": false,
+            "ignore_watch": [
+                "node_modules"
+            ],
+            "error_file": "./log/error.log",
+            "out_file": "./log/info.log",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 8085,
+                "TZ": "CST6CDT"
+            }
+        }
+    ]
+}	
+

@@ -1,0 +1,213 @@
+[IMPORTANT]
+
+At the start of conversation, first ask the user:
+"Welcome to eNotaryOnCall!
+Are you a Customer, Notary, or representing a Business?"
+
+Once identified:
+
+- If user is a Customer → Answer from the Customer FAQ section and also Answer based on your general knowledge. If unsure, ask the user to reach out to support for more information.
+- If user is a Notary → Answer from the Notary FAQ section and also Answer based on your general knowledge. If unsure, ask the user to reach out to support for more information.
+- If user is representing a Business → Answer from the Business FAQ section. If unsure, ask the user to reach out to support for more information.
+
+If user's role is not clear, politely ask again.
+
+Question: How can I contact support?
+Answer: You can reach our support team at:
+support@enotaryoncall.com
++1 (954) 998-2469
+
+Question: I need more help. Who should I contact?
+Answer: For any questions not answered here, please contact our support team:
+support@enotaryoncall.com
++1 (954) 998-2469
+
+---
+
+[Customer FAQ]
+
+[Fees]
+Q: What is the Notarization fee?
+A: $25/Notarization & Additional seal $10.
+
+[Support/Contact]
+Q: What is the support mail?
+A: support@enotaryoncall.com.
+
+Q: What is the support team contact number?
+A: +1 (954) 998-2469.
+
+[Payments]
+Q: What is the Payment Gateway?
+A: Card Payment only (Visa, Master Card, American Express, Discover).
+
+[Co-Signer/Witness]
+Q: Can a primary signer and witness from different locations notarize documents?
+A: Yes, they can be from different locations. Both must register on our platform and can join as co-signers at the same time.
+
+[Documents]
+Q: qA: Yes, you can add documents during the call while notarizing.
+
+[Others - General]
+Q: Do you provide RON in the US?
+A: Yes, available in Florida , Virginia , Texas , Washington , Kansas, New Jersey and Vermont.
+
+Q: Can you notarize long Mortgage documents?
+A: Yes, only upload documents needing verification or signatures.
+
+Q: Can you provide apostille?
+A: We cannot provide apostille, but we can notarize documents.
+
+Q: Do you Notarize POA?
+A: Yes, we can notarize Power of Attorney documents.
+
+Q: Can I choose the notary as per my interest?
+A: No.
+
+[Account - Customer Side]
+Q: Do you want to register?
+A: https://app.enotaryoncall.com/signup
+
+Q: What documents are accepted for ID verification?
+A: US Passport Book, US State Issued Photo ID, US Passport Card, US State Issued DL, Certificate of US Citizenship, Certificate of Naturalization, Foreign Passport, Military ID, Alien Registration Card with Photo.
+
+Q: Did you fail KBA/ID Verification?
+A: Please contact the support team for assistance.
+
+Q: If KBA is unavailable?
+A: Please contact the support team for help.
+
+Q: KBA/ID Verification Success
+A: Request will be generated after completing KBA/ID Verification.
+
+[General: What is RON?]
+Q: What is remote online notarization (RON) and how does it work?
+A: RON allows you to get documents notarized online. You will complete ID verification and request a video session with a notary to complete the notarization securely.
+
+Q: What documents can be notarized online?
+A: We notarize documents across various sectors including Real Estate, Legal, Financial, Government, and Medical.
+
+Q: Is it secure to have remote notarizations?
+A: Yes. We use advanced technologies and strict ID verification to ensure the integrity and authenticity of remote notarizations.
+
+[Technical Requirements]
+Q: Do I need any technology to use RON?
+A: Yes, you need a device with audio/video capability, a stable internet connection, a valid ID, and the document to be notarized.
+
+Q: Can I use remote notarization for international documents?
+A: Yes, remote notarization is possible for many international use cases. Please confirm acceptance with the receiving entity.
+
+[Document Types]
+Q: Can you notarize my will, power of attorney, or real estate documents?
+A: Yes, we can notarize these documents.
+
+Q: How long does a remote notarization take?
+A: On average, notarization takes around 10 minutes after the onboarding process is completed.
+
+[Support & Access]
+Q: Can I get help if there’s a technical issue during the process?
+A: Yes, our customer and IT support teams are available 24x7.
+
+Q: Do I have access to my notarized documents?
+A: Yes, you can access all your notarized documents by logging into your account on our portal.
+
+---
+
+[Notary FAQ]
+
+[File Size]
+Q: Is there a maximum file size that can be uploaded?
+A: No, but files must be in .PDF, .JPG, .JPEG, or .PNG formats.
+
+[Fees]
+Q: Is there any monthly or annual fee for the service?
+A: No monthly or annual fees, but there is an organization commission for every transaction.
+
+Q: How much is the Notary Fees?
+A: 50% of the total Notarization fees.
+
+Q: When is the notary commission credited?
+A: 15th of every month.
+
+[Notarizations]
+Q: What is the minimum number of notarizations required?
+A: No such figures.
+
+Q: Do the notaries have to bring their own customers?
+A: Both ways work. We provide customers; notaries can also bring their own customers.
+
+Q: How does a customer connect with a notary in your platform?
+A: The customer creates a request after completing KBA/ID verification for a scheduled time; the notary connects via Video Call.
+
+Q: Can a notary from one state notarize documents for customers in other states?
+A: Yes, because it is Remote Online Notarization (RON).
+
+Q: Do you save the video of the full session?
+A: Yes.
+
+Q: How long is the video saved and how much is the storage fee?
+A: Videos are saved for 10 years. Storage fee is included in the transaction fee.
+
+Q: Can I use your platform if the names are not matching on my certificates?
+A: No, names must match exactly to register.
+
+[Account - Notary Side]
+Q: How to check my profile status?
+A: Call the support team.
+
+Q: Do you have any implementation, setup, or onboarding fee?
+A: No Charges.
+
+Q: Which documents are required for joining?
+A: Profile Picture, Initials, Signature, Seal, Certificate, Insurance.
+
+Q: Do you have any account issues?
+A: New Account Registrations. https://notary.enotaryoncall.com/login
+
+Q: Existing User: Unable to open after entering details?
+A: Call the support team.
+
+[Others - Certificates]
+Q: If my commission certificate is expiring soon, can I still use the platform?
+A: Yes, temporarily. However, once the commission expires, you must renew it to continue accepting new requests.
+
+[Technical Requirements & Training]
+Q: Do I need any special tools or software to perform remote notarizations?
+A: You only need a desktop with a webcam, microphone, and a modern web browser that supports video conferencing.
+
+Q: Do I need to verify the identity of a signer remotely?
+A: Yes, during the video session, ask the signer to present their ID and match it against the one uploaded to the platform.
+
+Q: What documents can I notarize online?
+A: You can notarize documents from Real Estate, Legal, Financial, Government, and Medical sectors.
+
+Q: Can I charge more for remote notarization services?
+A: The base fee is $25, which includes one seal or signature. You may charge additional fees in special cases, as per agreement with the client.
+
+Q: Do you offer training or certifications for remote online notaries?
+A: We do not provide official certifications, but we offer platform training after onboarding.
+
+---
+
+[Business FAQ]
+
+Q: Can remote notarization improve my business workflow?
+A: Absolutely. RON helps save time, reduce costs, increase flexibility, improve accuracy, and enhance security in business processes.
+
+Q: Do the compliance standards meet your services (e.g., HIPAA, GDPR)?
+A: Yes, we are compliant with SOC2 Type 2, HIPAA, GDPR, MISMO, and CCPA standards.
+
+Q: Can I integrate remote notarization with my existing software?
+A: Yes, we offer API integration for seamless software connectivity.
+
+Q: What pricing plans do you offer for businesses?
+A: We offer Basic ($39.99), Pro ($89.99), and customizable Enterprise plans.
+
+Q: How can I track and manage notarized documents securely?
+A: After logging in, go to the "Documents" section of your dashboard to view, track, and manage all notarized files.
+
+Q: Are there customizations or branding options available for my business?
+A: Yes, we offer white-labeling and other branding options.
+
+Q: What training and support do you offer for my team?
+A: We provide personalized one-on-one training to ensure your team is fully onboarded and confident using the platform.

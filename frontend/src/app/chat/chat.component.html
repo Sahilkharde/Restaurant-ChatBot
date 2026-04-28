@@ -1,0 +1,132 @@
+<div class="chat-wrapper" [style.--brand]="brandColor">
+  <!-- Header -->
+  <div class="chat-header">
+    <div class="header-brand">
+      <span class="header-logo">🍽️</span>
+      <span class="header-title">DineBot</span>
+      <span *ngIf="session?.restaurantName" class="header-rest">— {{ session.restaurantName }}</span>
+    </div>
+    <div class="header-actions">
+      <span *ngIf="cartCount > 0" class="cart-badge">🛒 {{ cartCount }}</span>
+      <button class="reset-btn" (click)="resetChat()" title="Start over">↺ Reset</button>
+    </div>
+  </div>
+
+  <!-- Messages -->
+  <div class="chat-container" #messageContainer>
+    <div class="messages">
+      <div *ngFor="let msg of messages" class="message" [ngClass]="msg.sender === 'You' ? 'user-message' : 'bot-message'">
+
+        <!-- Bot avatar -->
+        <div *ngIf="msg.sender === 'Bot'" class="bot-avatar">🤖</div>
+
+        <div class="bubble-col">
+          <!-- Text bubble -->
+          <div class="bubble">
+            <div class="sender">{{ msg.sender }}:</div>
+            <div class="msg-text" [innerHTML]="msg.text"></div>
+            <div class="msg-time">{{ msg.timestamp | date:'shortTime' }}</div>
+          </div>
+
+          <!-- UI block — only render on the last message per block type to avoid duplicates -->
+          <div *ngIf="msg.uiBlock" class="ui-block">
+
+            <app-business-selector
+              *ngIf="msg.uiBlock.type === 'business_cards'"
+              (selected)="onBusinessSelected($event)">
+            </app-business-selector>
+
+            <app-restaurant-cards
+              *ngIf="msg.uiBlock.type === 'restaurant_cards'"
+              [restaurants]="msg.uiBlock.data.restaurants"
+              (selected)="onRestaurantSelected($event)">
+            </app-restaurant-cards>
+
+            <app-customer-form
+              *ngIf="msg.uiBlock.type === 'form_step'"
+              [data]="msg.uiBlock.data"
+              (submitted)="onFormSubmitted($event)">
+            </app-customer-form>
+
+            <app-main-menu
+              *ngIf="msg.uiBlock.type === 'main_menu'"
+              (selected)="onMainMenuSelected($event)">
+            </app-main-menu>
+
+            <app-menu-view
+              *ngIf="msg.uiBlock.type === 'menu_grid'"
+              [data]="msg.uiBlock.data"
+              [ordering]="msg.uiBlock.data?.ordering"
+              [cartCount]="cartCount"
+              (itemAdded)="onItemAdded($event)"
+              (viewCartClicked)="onViewCart()"
+              (backClicked)="onMenuBack()">
+            </app-menu-view>
+
+            <app-cart-drawer
+              *ngIf="msg.uiBlock.type === 'cart_review'"
+              [data]="msg.uiBlock.data"
+              (qtyChanged)="onQtyChanged($event)"
+              (confirmed)="onOrderConfirmed()"
+              (backClicked)="onCartBack()">
+            </app-cart-drawer>
+
+            <app-table-booking
+              *ngIf="msg.uiBlock.type === 'date_picker'"
+              [data]="msg.uiBlock.data"
+              (datePicked)="onDatePicked($event)">
+            </app-table-booking>
+
+            <app-table-booking
+              *ngIf="msg.uiBlock.type === 'time_slots'"
+              [data]="msg.uiBlock.data"
+              (timePicked)="onTimePicked($event)">
+            </app-table-booking>
+
+            <app-table-booking
+              *ngIf="msg.uiBlock.type === 'party_size'"
+              [data]="msg.uiBlock.data"
+              (partySizePicked)="onPartySizePicked($event)">
+            </app-table-booking>
+
+            <app-table-booking
+              *ngIf="msg.uiBlock.type === 'booking_confirm'"
+              [data]="msg.uiBlock.data"
+              (bookingConfirmed)="onBookingConfirmed()"
+              (bookingCancelled)="onBookingCancelled()">
+            </app-table-booking>
+
+            <app-order-summary
+              *ngIf="msg.uiBlock.type === 'order_summary'"
+              [data]="msg.uiBlock.data"
+              (backToMenuClicked)="onBackToMenu()">
+            </app-order-summary>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Typing indicator -->
+      <div *ngIf="isTyping" class="message bot-message">
+        <div class="bot-avatar">🤖</div>
+        <div class="bubble typing-bubble">
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Input area -->
+  <div class="input-area">
+    <input
+      class="chat-input"
+      type="text"
+      [(ngModel)]="userInput"
+      placeholder="Type a message..."
+      (keyup.enter)="sendMessage()"
+    />
+    <button class="send-btn" (click)="sendMessage()" [disabled]="!userInput.trim()">Send</button>
+  </div>
+</div>

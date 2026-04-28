@@ -1,0 +1,14 @@
+<nav class="global-nav">
+  <div class="nav-brand">
+    <span class="nav-logo">🍽️ DineBot</span>
+  </div>
+  <div class="nav-links">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Chat</a>
+    <span class="divider">|</span>
+    <a routerLink="/admin" routerLinkActive="active">Admin</a>
+  </div>
+</nav>
+
+<main class="app-content">
+  <router-outlet></router-outlet>
+</main>
