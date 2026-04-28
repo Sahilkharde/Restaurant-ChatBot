@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "prod-build": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build --configuration production",
+    "render-build": "node --max_old_space_size=512 ./node_modules/@angular/cli/bin/ng build --configuration production",
     "aws-rm-files": "aws s3 rm s3://enocchatbotfrontendtest --recursive",
     "aws-deploy-v1": "aws s3 sync dist/enoc-chatbot/browser/ s3://enocchatbotfrontendtest --exclude \"*\" --include \"*.js\" --content-type application/javascript",
     "aws-deploy-v2": "aws s3 sync dist/enoc-chatbot/browser/ s3://enocchatbotfrontendtest --exclude \".js\"",
