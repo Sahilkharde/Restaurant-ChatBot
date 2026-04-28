@@ -12,13 +12,15 @@ services:
       - key: NODE_ENV
         value: production
 
-  # ── Frontend (Angular Static Site) ────────────────────────────────────────
+  # ── Frontend (pre-built Angular static files) ─────────────────────────────
+  # The dist/ folder is committed to the repo so no Angular build is needed.
+  # Render just installs `serve` and starts the static file server.
   - type: web
     name: dinebot-frontend
     runtime: node
     rootDir: frontend
-    buildCommand: npm install && npx ng build --configuration production
-    startCommand: npx serve -s dist/enoc-chatbot/browser -l 10000
+    buildCommand: npm install --omit=dev
+    startCommand: npx serve -s dist/enoc-chatbot/browser -l $PORT
     envVars:
       - key: NODE_ENV
         value: production

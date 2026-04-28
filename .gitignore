@@ -10,9 +10,11 @@ node_modules/
 *.log
 log/
 
-# Build output
-dist/
+# Build output — block backend dist, but allow pre-built frontend dist
+backend/dist/
+backend/node_modules/
 .angular/
+# frontend/dist is intentionally committed so Render can serve without building
 
 # Mercurial
 .hg/
